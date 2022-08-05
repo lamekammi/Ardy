@@ -1,25 +1,43 @@
-# MERN-Stack Infrastructure
+# Ardy
 
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
+***
 
-## Project Start Checklist
+  Ardy is a website to post Small Business Shops that others can Sign Up and checkout!
 
-- [ ] Run `npm install` to download all needed NPM packages
-- [ ] Run `npm run build` to generate a build folder for your project
-- [ ] Create a `.env` file with these variables:
+## WireFrames
+***
+Home Page:
+![Home Page](https://i.imgur.com/Lj2IumB.png)
 
-```
-DATABASE_URL=YOUR_DATABASE_GOESHERE
-SECRET=YOUR_SECRET_HERE
-```
+Sign up or Login Page:
+![Sign up or Login Page](https://i.imgur.com/UmwRrDM.png)
 
-- [ ] React server running on localhost:3000 after running `npm start`
-- [ ] Node.js backend running on localhost:3001 after running `nodemon server.js`
-- [ ] Set up this project's Github page
-  - [ ] rename this folder with the `mv` command: `mv project-4-starter MY_PROJECT_NAME`
-  - [ ] run `rm -rf .git` in the root of this repo to remove any trace of where you downloaded this
-  - [ ] run `git init` to remake this starter into your own git repo
-  - [ ] go to `github.com` and create a new online repo for you to upload to
-  - [ ] make a commit on your local computer and then push to github
-- [ ] install a component library or place a CSS CDN in your `public/index.html`
-- [ ] Start coding!
+Shop List:
+![Shop List](https://i.imgur.com/GbPOcUx.png)
+
+Shop Detail:
+![Shop Detail](https://i.imgur.com/nuClClY.png)
+
+Create Shop:
+![Create Shop](https://i.imgur.com/yeQ4GyR.png)
+
+Add/Edit Shop:
+![Add Edit Shop](https://i.imgur.com/ssS7E9D.png)
+
+Add/Edit Items:
+![Add Edit Items](https://i.imgur.com/OfrDl9o.png)
+
+Cart and Checkout Page:
+![Cart and Checkout Page](https://i.imgur.com/OVMIRlC.png)
+
+Order History:
+![Order History](https://i.imgur.com/3F7OtSM.png)
+
+## Trello
+***
+[Trello](https://trello.com/b/B3H3ykNl/project-4)
+
+## ERD
+***
+![ERD](https://i.imgur.com/j4kQrae.png)
+
