@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import OrderHistory from "../OrderHistory/OrderHistory";
 // needs to be able to see all items in cart
 // needs to be able to see a total of all the items
-// needs a checkout function where will render to order history page
+// needs a checkout function where will render to order history page with
+//      past orders the user has made
 
 export default function CheckoutPage() {
 

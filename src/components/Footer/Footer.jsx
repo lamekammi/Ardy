@@ -1,3 +1,6 @@
+
+// needs to show Ardy C 2022 lamekammi 
+
 export default function Footer() {
     
     return (
