@@ -8,6 +8,8 @@ import Footer from '../../components/Footer/Footer';
 import CheckoutPage from '../../pages/CheckoutPage/CheckoutPage';
 import ShopList from '../ShopList/ShopList';
 import Shop from "../Shop/Shop";
+import ShopDetail from "../ShopDetail/ShopDetail";
+import OrderHistory from "../OrderHistory/OrderHistory";
 
 
 export default function App() {
@@ -22,6 +24,8 @@ export default function App() {
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/shops" element={<ShopList />} />
             <Route path="/yourshop" element={<Shop />} />
+            <Route path="/orders" element={<OrderHistory />} />
+            <Route path="/shopdetail" element={<ShopDetail />} />
           </Routes>
         </>
       ) : (

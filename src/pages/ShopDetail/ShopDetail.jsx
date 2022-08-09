@@ -1,6 +1,13 @@
+
+// needs to show shop models details
+//      - shop name
+//      - shop items
+//      - shop info
+// needs to be able to add items to the cart from shop detail page
+
 export default function ShopDetail() {
 
     return(
-        <h1>Shop Detail</h1>
+        <p>shop detail</p>
     )
 }
