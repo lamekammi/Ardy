@@ -13,8 +13,8 @@ export function newItem() {
     return sendRequest(`${BASE_URL}/items/new`);
 }
 
-export function createItem() {
-    return sendRequest(`${BASE_URL}/items/create`, 'POST');
+export function createItem(item) {
+    return sendRequest(`${BASE_URL}/items/create`, 'POST', { item });
 }
 
 export function deleteItem(id) {
