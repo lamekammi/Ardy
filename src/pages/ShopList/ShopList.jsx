@@ -10,7 +10,7 @@ export default function ShopList({ item }) {
     const [storeItems, setStoreItems] = useState([])
 
     useEffect(function () {
-        async function getItems() {
+        async function getAll() {
             const items = await itemsAPI.getAll();
             setStoreItems(items);
         }
