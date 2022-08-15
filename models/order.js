@@ -35,18 +35,22 @@ orderSchema.virtual('orderTotal').get(function () {
     return this.cartItems.reduce(
         (total, cartItems) => total + cartItems.extPrice, 0);
 });
+
 // need a totalQty amount
 orderSchema.virtual('totalQty').get(function () {
     return this.cartItems.reduce((total, cartItems) => total + cartItems.qty, 0);
 });
+
 // needs an order id
 orderSchema.virtual('orderID').get(function () {
     return this.id.slice(-5).toUpperCase();
 });
+
 // need to add total of the items
 cartItemSchema.virtual('extPrice').get(function () {
     return this.qty * this.item.price;
 });
+
 // need to add item to the cart
 orderSchema.methods.addItemToCart = async function (orderItem) {
     const cart = this;
