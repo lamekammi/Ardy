@@ -15,9 +15,10 @@ export default function AddItem({ user, setUser }) {
         setError('');
     }
 
-    async function handleAddNewItem() {
+    async function handleAddNewItem(evt) {
+        evt.preventDefault();
         console.log('item', item)
-        const addingItem = await itemsAPI.createItem();
+        const addingItem = await itemsAPI.createItem(item);
         
     }
 

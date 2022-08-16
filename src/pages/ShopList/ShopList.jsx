@@ -11,21 +11,23 @@ export default function ShopList({ item, user, setUser }) {
     const [storeItems, setStoreItems] = useState([])
 
     useEffect(function () {
-        async function getAll() {
+        async function getAllItems() {
             const items = await itemsAPI.getAll();
             setStoreItems(items);
         }
-    })
+        getAllItems();
+    }, [])
 
 
-    const items = item?.map((item, idx) => {
+    const items = storeItems?.map((item, idx) => {
+        return(
         <div>
             <ul>
                 <li>Item: {item.name}
                     Price: {item.price}</li>
                     <EditItem user={user} setUser={setUser} /> <DeleteItem user={user} setUser={setUser}/>
             </ul>
-        </div>
+        </div>)
     });
     return(
         <>

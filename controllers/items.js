@@ -13,9 +13,11 @@ module.exports = {
 
 // an index function that will show the items in a shop
 function index(req, res) {
-    Item.find({}, function(err, items) {
-        res.render('items/index', { items });
-    })
+   Item.find({})
+   .then(foundItems => {
+    res.json(foundItems)
+   })
+   .catch(err => console.log(err))
 };
 
 function show(req, res) {
@@ -33,9 +35,10 @@ function newItem(req, res) {
 function create(req, res){
     req.body.user = req.user._id;
     console.log(req.body)
-    const item = new Item({
+    let item = new Item({
         name: req.body.name,
-        price: req.body.price
+        price: req.body.price,
+        user: req.body.user
     });
     //console.log(item)
     item.save(function(err) {
@@ -44,17 +47,14 @@ function create(req, res){
             return res.redirect('/items/new');
         }
         console.log(item);
-        res.redirect('/items');
     });
 }
 
 // needs an update item function
 function edit(req, res) {
     Item.findById(req.params.id, (err, foundItem) => {
-        res.render('items/edit', {
-            item: foundItem
+        res.json(foundItem)
         })
-    })
 };
 
 function update(req, res) {
@@ -65,7 +65,7 @@ function update(req, res) {
             new: true,
         },
         (err, updatedItem) => {
-            res.redirect(`/items/${req.params.id}`);
+           
         }
     )
 };

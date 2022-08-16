@@ -6,7 +6,8 @@ export default function EditItem({ user, setUser }) {
     const [error, setError] = useState('');
   
     // Event Handler
-    async function handleEditItem(id) {
+    async function handleEditItem(id, evt) {
+        evt.preventDefault();
         const updateItem = await itemsAPI.editItem(id);
     }
 
@@ -21,9 +22,9 @@ export default function EditItem({ user, setUser }) {
             <div className="form-container">
                 <form autoComplete="off" onSubmit={handleEditItem}>
                     <label>Item Name</label>
-                    <input type="text" name="email" value={item.name} onChange={handleChange} required />
+                    <input type="text" name="name" value={item.name} onChange={handleChange} required />
                     <label>Price</label>
-                    <input type="text" name="price" value={item.price} onCahnge={handleChange} required />
+                    <input type="text" name="price" value={item.price} onChange={handleChange} required />
                     <button type="submit">Edit Item</button>
                 </form>
             </div>
