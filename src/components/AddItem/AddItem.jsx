@@ -6,7 +6,7 @@ import {useState } from 'react';
 //      -qty
 //      -price
 
-export default function AddItem() {
+export default function AddItem({ user, setUser }) {
     const [item, setItem] = useState({});
     const [error, setError] = useState('');
 
@@ -15,14 +15,14 @@ export default function AddItem() {
         setError('');
     }
 
-    function handleSubmit(evt) {
-        alert('clicked');
+    async function handleAddNewItem() {
+        const addingItem = await itemsAPI.newItem();
     }
 
     return(
         <div>
             <div className="form-container">
-                <form autoComplete="off" onSubmit={handleSubmit}>
+                <form autoComplete="off" onSubmit={handleAddNewItem}>
                     <label>Item Name</label>
                     <input type="text" name="email" value={item.name} onChange={handleChange} required />
                     <label>Price</label>

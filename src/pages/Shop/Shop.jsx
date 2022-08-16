@@ -13,13 +13,12 @@ import EditItem from "../../components/EditItem/EditItem";
 //      - add item comp
 
 
-export default function Shop() {
+export default function Shop({ user, setUser }) {
 
     return(
         <>
             <h1>Shop</h1>
-            <AddItem />
-            <EditItem />
+            <AddItem user={user} setUser={setUser}/>
         </> 
     )
 };

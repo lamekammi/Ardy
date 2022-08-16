@@ -12,4 +12,6 @@ router.post('/cart/checkout', ordersCtrl.checkout);
 
 router.put('/cart/qty', ordersCtrl.setItemQtyInCart);
 
+router.get('/history', ordersCtrl.forUser);
+
 module.exports = router;

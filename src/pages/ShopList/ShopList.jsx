@@ -1,4 +1,6 @@
 import ShopDetail from '../ShopDetail/ShopDetail';
+import EditItem from '../../components/EditItem/EditItem';
+import DeleteItem from '../../components/DeleteItem/DeleteItem';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import * as itemsAPI from '../../utilities/items-api';
@@ -6,7 +8,7 @@ import * as itemsAPI from '../../utilities/items-api';
 // and have a Link to see the shop's details to see the items a shop has
 
 
-export default function ShopList({ item }) {
+export default function ShopList({ item, user, setUser }) {
     const [storeItems, setStoreItems] = useState([])
 
     useEffect(function () {
@@ -22,6 +24,7 @@ export default function ShopList({ item }) {
             <ul>
                 <li>Item: {item.name}
                     Price: {item.price}</li>
+                    <EditItem user={user} setUser={setUser} /> <DeleteItem user={user} setUser={setUser}/>
             </ul>
         </div>
     });
@@ -30,7 +33,6 @@ export default function ShopList({ item }) {
             <h1>ShopList</h1>
             <div>
                 {items}
-                <p><Link to="/shopdetail">Shop Detail</Link></p>
             </div> 
         </>
         

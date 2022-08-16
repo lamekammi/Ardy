@@ -22,7 +22,7 @@ export function deleteItem(id) {
 }
 
 export function editItem(id) {
-    return sendRequest(`${BASE_URL}/items/${id}/edit`);
+    return sendRequest(`${BASE_URL}/items/${id}/edit`, { id });
 }
 
 export function updateItem(id) {

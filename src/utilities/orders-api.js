@@ -23,5 +23,5 @@ export function checkout() {
 };
 
 export function getAllForUser() {
-    return sendRequest(`${BASE_URL}/user`);
+    return sendRequest(`${BASE_URL}/history`);
 }
