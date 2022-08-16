@@ -32,15 +32,19 @@ function newItem(req, res) {
 // needs a create item function
 function create(req, res){
     req.body.user = req.user._id;
-    req.body.name = req.user.name;
-    const item = new Item(req.body);
+    console.log(req.body)
+    const item = new Item({
+        name: req.body.name,
+        price: req.body.price
+    });
+    //console.log(item)
     item.save(function(err) {
         if(err) {
             console.log(err)
             return res.redirect('/items/new');
         }
         console.log(item);
-        re.redirect('/items');
+        res.redirect('/items');
     });
 }
 

@@ -1,15 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const itemSchema = require('./item');
+const Item = require('./item');
 
 const cartItemSchema = new Schema({
+    item: { type: Schema.Types.ObjectId, ref: 'Item' },
     qty: { 
         type: Number,
         default: 1
     },
-    item: itemSchema
 }, {
-    timestamps: true,
     toJSON: { virtuals: true }
 })
 

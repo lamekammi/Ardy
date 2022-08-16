@@ -22,7 +22,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path="/checkout" element={<CheckoutPage user={user} setUser={setUser}/>} />
-            <Route path="/shops" element={<ShopList user={user} setUser={setUser} />} />
+            <Route path="/items" element={<ShopList user={user} setUser={setUser} />} />
             <Route path="/yourshop" element={<Shop user={user} setUser={setUser} />} />
             <Route path="/history" element={<OrderHistory user={user} setUser={setUser} />} />
             <Route path="/shopdetail" element={<ShopDetail />} />

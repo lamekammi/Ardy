@@ -6,7 +6,6 @@ const itemSchema = new Schema({
         type: String,
         required: true
     },
-    qty: Number,
     price: {
         type: Number,
         required: true

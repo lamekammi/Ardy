@@ -12,7 +12,7 @@ export default function NavBar({ user, setUser }) {
     <nav>
       <Link to="/checkout">Checkout</Link>
       &nbsp; | &nbsp;
-      <Link to="/shops">Shops</Link>
+      <Link to="/items">Shops</Link>
       &nbsp; | &nbsp;
       <Link to="/yourshop">Your Shop</Link>
       &nbsp; | &nbsp;

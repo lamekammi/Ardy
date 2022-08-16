@@ -16,7 +16,9 @@ export default function AddItem({ user, setUser }) {
     }
 
     async function handleAddNewItem() {
-        const addingItem = await itemsAPI.newItem();
+        console.log('item', item)
+        const addingItem = await itemsAPI.createItem();
+        
     }
 
     return(
@@ -24,9 +26,9 @@ export default function AddItem({ user, setUser }) {
             <div className="form-container">
                 <form autoComplete="off" onSubmit={handleAddNewItem}>
                     <label>Item Name</label>
-                    <input type="text" name="email" value={item.name} onChange={handleChange} required />
+                    <input type="text" name="name" value={item.name} onChange={handleChange} required />
                     <label>Price</label>
-                    <input type="text" name="price" value={item.price} onCahnge={handleChange} required />
+                    <input type="text" name="price" value={item.price} onChange={handleChange} required />
                     <button type="submit">Add Item</button>
                 </form>
             </div>

@@ -1,7 +1,6 @@
 import ShopDetail from '../ShopDetail/ShopDetail';
 import EditItem from '../../components/EditItem/EditItem';
 import DeleteItem from '../../components/DeleteItem/DeleteItem';
-import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import * as itemsAPI from '../../utilities/items-api';
 // needs to show every shop created
@@ -19,7 +18,7 @@ export default function ShopList({ item, user, setUser }) {
     })
 
 
-    const items = item.map((item, idx) => {
+    const items = item?.map((item, idx) => {
         <div>
             <ul>
                 <li>Item: {item.name}
@@ -32,7 +31,7 @@ export default function ShopList({ item, user, setUser }) {
         <>
             <h1>ShopList</h1>
             <div>
-                {items}
+                {items ? items : ''}
             </div> 
         </>
         
