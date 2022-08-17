@@ -8,7 +8,7 @@ router.get('/items/:id', itemsCtrl.show);
 router.post('/create', itemsCtrl.create);
 router.delete('/items/:id', itemsCtrl.delete);
 router.get('/:id/edit', itemsCtrl.edit);
-router.put('/items/:id', itemsCtrl.update);
+router.put('/', itemsCtrl.update);
 
 module.exports = router;
 

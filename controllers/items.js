@@ -52,20 +52,27 @@ function create(req, res){
 
 // needs an update item function
 function edit(req, res) {
-    Item.findById(req.params.id, (err, foundItem) => {
+    console.log('mom')
+    Item.findById(req.body._id, (err, foundItem) => {
+        if (err) {
+            console.log(err) 
+        } 
         res.json(foundItem)
         })
+        
 };
 
 function update(req, res) {
+    console.log('hi')
+    console.log(req.body)
     Item.findByIdAndUpdate(
-        req.params.id,
+        req.body.id,
         req.body,
         {
             new: true,
         },
         (err, updatedItem) => {
-           
+           res.json(updatedItem)
         }
     )
 };

@@ -26,5 +26,6 @@ export function editItem(id) {
 }
 
 export function updateItem(id) {
-    return sendRequest(`${BASE_URL}/${id}`);
+    console.log(id)
+    return sendRequest(`${BASE_URL}/`, 'PUT', id);
 }
